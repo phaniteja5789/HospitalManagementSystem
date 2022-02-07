@@ -1,0 +1,81 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body
+{
+    font-family: verdana;
+    background-color:#1E90FF;
+    padding:50px;
+}
+
+ul#navmenu ,ul.patient,ul.pharmacy,ul.diagnostics
+{
+    list-style-type: none;
+    
+}
+
+ul#navmenu li
+{
+   
+    width: 250px;
+    font-size: 12pt;
+    text-align: center;
+    position: relative;
+    top:50px;
+    left: 250px;
+    float:left;
+    margin-right: 4px;
+}
+
+
+ul#navmenu a
+{
+    text-decoration: none;
+    display: inline-block;
+    width:150px;
+    height: 30px;
+    line-height: 25px;
+    font-size: 10pt;
+    background-color: #1E90FF ;
+    color:black;
+    border-radius: 5px;
+    margin-top: 3px;
+    
+}
+
+ul#navmenu li:hover > a
+{
+    background-color: white;
+}
+
+ul#navmenu ul.patient,ul.pharmacy,ul.diagnostics
+{
+    display: none;
+    position:absolute;
+    top : 0px;
+    left: -250px;
+}
+
+ul#navmenu li:hover .patient
+{
+    display: block;
+}
+
+ul#navmenu li:hover .pharmacy
+{
+    display: block;
+}
+
+ul#navmenu li:hover .diagnostics
+{
+    display: block;
+}
+p
+{
+  color:yellow;
+  position: absolute;
+  top: 48%;
+  left:5%;
+  font-size: 0.5em;
+}

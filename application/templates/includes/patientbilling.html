@@ -1,0 +1,107 @@
+{%include "includes/base_header.html"%}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/viewpatient.css')}}">
+    </head>
+    <body>
+        <div class="main3">
+            <form method="POST">
+            <h2>Patient Billing</h2>
+            <table>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>DOJ</th>
+                    <th>Date of Discharge</th>
+                    <th>Type of Room</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="opa" value={{p.patientid}}></td>
+                    <td>{{p.patientname}}</td>
+                    <td>{{p.patientage}}</td>
+                    <td>{{p.patientaddress}}</td>
+                    <td>{{p.patientdoj}}</td>
+                    <td>{{date1}}</td>
+                    <td>{{p.patientbed}}</td>
+                </tr>
+                    
+            </table>
+            
+                <input type="submit" name="se" value="Search"/>
+            
+            <caption>No of days:{{days}} Bill for room:{{rb}}</caption>
+            <h3>Pharmacy Charges</h3>
+                <table>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                    </tr>
+                    {% if m %}
+                    {% for a in range(l) %}
+                    <tr>
+                        <td>{{m3[a].Medicinename}}</td>
+                        <td>{{m2[a]}}</td>
+                        <td>{{m3[a].rate}}</td>
+                        <td>{{m4[a]}}</td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    {% endif %}
+                    <caption>
+                                                    Bill for Pharmacy:{{sumpharma}}
+                                                   
+                        
+                        
+                    </caption>
+                </table>
+            <h3>Diagonstics Charges</h3>
+                
+                <table>
+                    <tr>
+                        <th>Name of the test</th>
+                        <th>Amount</th>
+                    </tr>
+                    {% if q2 %}
+                    {% for q in q2 %}
+                    <tr>
+                        <td>{{q.testname}}</td>
+                        <td>{{q.cost}}</td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        
+                    </tr>
+                    {% endif %}
+                    <caption>
+                        
+                            Bill for Diagonstics:{{sumdia}}
+                        
+                        
+                    </caption>
+                </table>
+            
+            
+                <input type="submit" name="sep" value="Confirm"/>
+            </form>
+            <caption>
+                
+                Grand Total:{{total}}
+                
+            </caption>
+            
+        </div>
+    </body>
+</html>

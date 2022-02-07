@@ -1,0 +1,65 @@
+{%include "includes/base_header.html"%}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/base.css')}}"/>
+    </head>
+    <body>
+        <div class="main">
+        <h2>Delete Patient</h2>
+
+        <form method="POST" >
+                <label for="patientssn">Patient ID*</label>
+                <input name="patientssn" type="text" value="{{p.patientid}}" required>
+
+
+                <label for="patientname">Patient Name</label>
+                <input name="patientname" type="text" value="{{p.patientname}}"><br>
+
+                <label for="patientAge">Patient Age</label>
+                <input name="patientAge" type="text" value="{{p.patientage}}"><br>
+
+                <label for="date of admission">Date of Admission</label>
+                <input name="date of admission" type="text" value="{{p.patientdoj}}"><br>
+
+                <label for="type of bed">Type of Bed</label>
+                <select name="type of bed" >
+
+                    <option value="select" selected>{{p.patientbed}}</option>
+                    <option value="General ward">General Ward</option>
+
+                    <option value="Semi Sharing">Semi Sharing</option>
+                    <option value="Single room" >Single room</option>
+                </select><br>
+                <label for="Address">Address</label>
+                <textarea rows="4" cols="50" name="Address" >
+                    {{p.patientaddress}}
+                </textarea><br>
+                <label for="state">State</label>
+                <select name="state" >
+
+                    <option value="" selected>{{p.patientstate}}</option>
+                    <option value="Karnataka">Karnataka</option>
+
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                </select><br>
+                <label for="city">City</label>
+                <select name="city" >
+
+                    <option value= selected>{{p.patientcity}}</option>
+                    <option value="Bangalore">Bangalore</option>
+
+                    <option value="Vijayawada">vijayawada</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+
+        <h6> * is Mandatory</h6>
+        <div class="mainsp">
+            <input   type="submit" id="endhayya" name="geta" value="GET"/>
+            <input   name="submit" id="daridram" type="submit" value="Delete"/>
+        </div>
+        </form>
+
+        </div>
+    </body>
+</html>

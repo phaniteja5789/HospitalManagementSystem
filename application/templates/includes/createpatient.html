@@ -1,0 +1,72 @@
+{%include "includes/base_header.html"%}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/base.css')}}">
+    </head> 
+    <body>
+        
+            {% with messages=get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            {{message}}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+        
+        <div class="main">
+        <h2>Patient Registration</h2>
+        
+        <form method="POST" action="/createpatient">
+                <label for="patientssn">Patient ID*</label>
+                <input name="patientssn" type="text" maxlength="9" pattern="\d{9}" required/><br/>
+                
+                <label for="patientname">Patient Name*</label>
+                <input name="patientname" type="text" required/><br/>
+                
+                <label for="patientAge">Patient Age*</label>
+                <input name="patientAge" type="text" minlength="1" maxlength="3" pattern="\d{3}" required/><br/>
+                
+                <label for="dateofadmission">Date of Admission*</label>
+                <input name="dateofadmission" type="date" placeholder="yyyy-mm-dd" required/><br/>
+                
+                <label for="typeofbed">Type of Bed*</label>
+                <select name="typeofbed" required>
+                    
+                    <option value="">Select</option>
+                    <option value="General ward">General Ward</option>
+
+                    <option value="Semi Sharing">Semi Sharing</option>
+                    <option value="Single room">Single room</option>
+                </select><br/>
+                <label for="Address">Address*</label>
+                <textarea name="Address" required></textarea><br/>
+                
+                <label for="state">State*</label>
+                <select name="state" required >
+                    
+                    <option value="">Select</option>
+                    <option value="Karnataka">Karnataka</option>
+
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                </select><br/>
+                <label for="city">City*</label>
+                <select name="city" required>
+                    
+                    <option value="">Select</option>
+                    <option value="Bangalore">Bangalore</option>
+
+                    <option value="Vijayawada">vijayawada</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+        
+        <h6> * is Mandatory </h6>
+        <h6> Age must be entered in 3 digits</h6>
+            <input id="bb" name="submit" type="submit" />
+            <input id="dev" name="Reset" type="reset"/>
+        </form>
+        
+        </div>
+
+    </body>
+</html>

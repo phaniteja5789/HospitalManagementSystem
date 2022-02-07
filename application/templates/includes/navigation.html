@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            ABC Hospital Management System
+            
+        </title>
+        
+                
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/navigation.css')}}">
+    </head>
+    <body>
+        <div class="dropdown">
+                <ul id="navmenu">
+                        <li><a>Patient</a><span class="darrow">&#9660;</span>
+                                <ul class="patient">
+                                        <li><a href="{{ url_for('createpatient') }}">Create Patient</a></li>
+                                        <li><a href="{{ url_for('updatepatient') }}">Update Patient</a></li>
+                                        <li><a href="{{ url_for('deletepatient') }}">Delete Patient</a></li>
+                                        <li><a href="{{ url_for('viewpatients') }}">View All Patient</a></li>
+                                        <li><a href="{{ url_for('searchpatient') }}">Search Patient</a></li>
+                                        <li><a href="{{ url_for('patientbilling') }}">Patient Billing Screen</a></li>
+                    
+                                </ul>
+                        </li>
+                        <li><a>Pharmacy</a><span class="darrow">&#9660;</span>
+                                <ul class="pharmacy">
+                                        <li><a href="{{ url_for('patientdetails') }}">Get Patient Details</a></li>
+                                <li><a href="{{ url_for('patientdetails') }}">Issue Medicines</a></li>
+                                </ul>
+                        </li>
+                        <li><a>Diagonstics</a><span class="darrow">&#9660;</span>
+                                <ul class=diagnostics>
+                                        <li><a href="{{ url_for('getpatientdetails') }}">Get Patient Details</a></li>
+                                        <li><a href="{{ url_for('getpatientdetails') }}">Diagonstics</a></li>
+                                </ul>
+                        </li>
+                </ul>
+                
+        
+       </div> 
+   <p>    
+        {% with messages=get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+</p>
+    </body>
+</html>

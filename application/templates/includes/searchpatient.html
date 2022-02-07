@@ -1,0 +1,43 @@
+{%include "includes/base_header.html"%}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/base.css')}}">
+    </head> 
+    <body>
+        <div class="main">
+        <h2>View Patient</h2>
+        
+        <form method="POST">
+                <label for="patientssn">Patient ID*</label>
+                <input name="patientssn" type="text" value="{{p.patientid}}" required>
+                <br/>
+                
+                <label for="patientname">Patient Name</label>
+                <input name="patientname" type="text" value="{{p.patientname}}"><br/>
+                
+                <label for="patientAge">Patient Age</label>
+                <input name="patientAge" type="text" value="{{p.patientage}}"><br/>
+                
+                <label for="date of admission">Date of Admission</label>
+                <input name="date of admission" type="text" value="{{p.patientdoj}}"><br/>
+                
+                <label for="type of bed">Type of Bed</label>
+                <input type="text" name="type of bed" value="{{p.patientbed}}"><br/>
+                <label for="Address">Address</label>
+                <textarea rows="4" cols="50" name="Address">
+                    {{p.patientaddress}}
+                </textarea><br/>
+                <label for="state">State</label>
+                <input type="text" name="state" value="{{p.patientstate}}"><br/>
+                <label for="city">City</label>
+                <input type="text" name="city" value="{{p.patientcity}}"><br/>
+        
+        <h6> * is Mandatory</h6>
+        
+            <input name="submit" type="submit" value="Search"/>
+            
+        </form>
+        
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+{%include "includes/base_header.html"%}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/viewpatient1.css')}}">
+    </head> 
+    <body>
+        <div class="main3">
+        <form method="POST" action="{{url_for('issuemedicines')}}">
+        <h3>Medicines Issued</h3>
+            <table>
+                <tr>
+                    <th>Medicine</th>
+                    <th>Quantity</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                    
+                </tr>
+                
+                    <tr>
+                        <td>
+                            <input type="text" name="abc1">
+                        </td>
+                        <td><input type="text" name="abc2"></td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    {% if laptop %}
+                    {% for ab in laptop %}
+                    <tr>
+                        <td><input type="text" name="abc" value={{ab["name"]}}></td>
+                        <td><input type="text" name="abc12" value={{ab["quantity"]}}></td>
+                        <td><input type="text" name="abc123" value={{ab["rate"]}}></td>
+                        <td><input type="text" name="abc1234" value={{ab["amount"]}}></td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                </table>
+            
+                    <input type="submit" name="sad" value="ADD"/>
+                <input type="submit" name="sepa" value="Update">
+            </form>
+        </div>
+    </body>
+</html>

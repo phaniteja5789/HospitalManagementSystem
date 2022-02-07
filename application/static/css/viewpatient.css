@@ -1,0 +1,206 @@
+body
+{
+    background-color: #1E90FF;
+
+}
+.main
+{
+    background-color: #1E90FF;
+    box-sizing: border-box;
+    border-color: black;
+    top:200px;
+    left:40%;
+    width:500px;
+    height:500px;
+    position: relative;
+    display: block;    
+}
+.main h2
+{
+    display: block;
+    text-align: center;
+}
+.main label
+{
+    position: absolute;
+}
+.main input[type="text"],select,textarea 
+{
+    margin-left: 15em;
+}
+.main h6
+{
+    margin-left: 5em;
+}
+.main input[type="submit"]
+{
+    border-radius: 25px;
+    color:white;
+    background-color: black;
+    
+    
+}
+.main button
+{
+    border-radius: 25px;
+    color:white;
+    background-color: black;
+    margin-left: 10em;
+}
+.main2
+{
+    background-color: #1E90FF;
+    box-sizing: border-box;
+    border-color: black;
+    top:215px;
+    left:35%;
+    width:600px;
+    height: 300px;
+    position: absolute;
+    display: grid;   
+    
+}
+.main2 h2
+{
+    display: block;
+    text-align: center;
+}
+.main2 table
+{
+    border-collapse: collapse;
+    width:100%
+}
+.main2 table,th,td
+{
+    border: 1px solid black; 
+    font-size: 12pt;
+}
+.main2 td 
+{
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+.main2 th
+{
+    background-color: black;
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+}
+.main3
+{
+    background-color: #1E90FF;
+    box-sizing: border-box;
+    border-color: black;
+    top:30%;
+    left:35%;
+    width:500px;
+    height: 300px;
+    position: absolute;
+    display: grid;   
+    margin-top: 30px;    
+}
+.main3 h2
+{
+    display: block;
+    text-align: center;
+    font-size: 14pt;
+    padding:4px;
+}
+.main3 h3
+{
+    display: block;
+    text-align: center;
+    font-size: 14pt;
+    padding: 4px;
+}
+
+.main3 table
+{
+    border-collapse: collapse;
+    caption-side: bottom;
+    width:125%
+}
+.main3 table,th,td
+{
+    border: 1px solid black; 
+    font-size: 10pt;
+    height:25px;
+}
+.main3 td 
+{
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+.main3 th
+{
+    background-color: black;
+    color: white;
+}
+.main3 input[type="submit"]
+{
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+   
+
+}
+#uni,#uni1
+{
+    padding:5px 15px; 
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-left: 10em;
+    position: absolute;
+    top: 120px;
+    left: 510px;
+}
+.main3 button
+{
+    padding:5px 15px; 
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-left: 10em;
+    position:absolute;
+    left:-100px;
+    top:350px;
+}
+.main3 p
+{
+    
+    color:black;
+    float: left;
+    background-color: #1E90FF;
+    margin-left: 1em;
+    font-weight: bold;
+    padding:10px;
+    font-size: 10pt;
+}
+#endhayya1{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 55px;
+  }
+#daridram1{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top:420px;
+    left: 20px;
+  }
+  

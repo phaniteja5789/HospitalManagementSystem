@@ -1,0 +1,131 @@
+body
+{
+    background-color:#1E90FF;
+}
+.main
+{
+    background-color: #1E90FF;
+    box-sizing: border-box;
+    border-color: black;
+    position:absolute;
+    top:210px;
+    left:450px;
+    width:400px;
+    height:350px;
+    display: block;
+}
+.main h2
+{
+    display: block;
+    text-align: center;
+    font-size: 14pt;
+}
+.main label
+{
+    position: absolute;
+    padding:10px;
+    font-weight: bold;
+    font-size: 11pt;
+}
+.main input[type="text"],select,input[type="date"],input[type="number"]
+{
+    margin-left: 15em;
+    padding:6px;
+    width:70%;
+    margin-bottom: 5px;
+}
+.main textarea
+{
+    margin-left: 15.5em;
+    padding:6px;
+    width:70%;
+    margin-bottom: 5px;
+}
+.main h6
+{
+    margin-left: 5em;
+    padding:6px;
+}
+.main input[type="submit"]
+{
+    position: absolute;
+    left:370px;
+    top:25px;
+    padding:5px 15px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 10em;
+
+
+}
+.main button
+{
+    padding:5px 15px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 10em;
+}
+#change{
+  background-color: black;
+  position: absolute;
+  top: 450px;
+  left: 0px;
+}
+#see{
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 220px;
+  top: 450px;
+}
+.mainsp{
+
+ margin-top:450px;
+
+}
+#endhayya{
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 55px;
+}
+#daridram{
+  background-color: black;
+  color: white;
+  position: absolute;
+  top:420px;
+  left: 20px;
+}
+#dev{
+  background-color: black;
+  color: white;
+  position: absolute;
+  top:420px;
+  left: 20px;
+}
+#bb{
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 55px;
+}
+p
+{
+  color:yellow;
+  position: absolute;
+  top: 80%;
+  left:5%;
+  font-size: 0.5em;
+}

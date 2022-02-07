@@ -1,0 +1,33 @@
+{%include "includes/base_header.html"%}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/viewpatient.css')}}">
+    </head> 
+    <body>
+        <div class="main2">
+                <h2>View Patient</h2>
+            <table>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>DOJ</th>
+                    <th>Type of Room</th>
+                </tr>
+                {% for la in l %}
+                <tr>
+                    
+                    <td>{{la.patientid}}</td>
+                    <td>{{la.patientname}}</td>
+                    <td>{{la.patientage}}</td>
+                    <td>{{la.patientaddress}}</td>
+                    <td>{{la.patientdoj}}</td>
+                    <td>{{la.patientbed}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        
+        </div>
+    </body>
+</html>

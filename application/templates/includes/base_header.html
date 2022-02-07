@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>
+       
+        ABC Hospital Management System
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/base_header.css') }}">
+    
+</head>
+<body>
+    <h1>ABC Hospital Management System
+        {%if login== True%}
+            
+            {%include "includes/navigation.html"%}
+                
+        {%else%}
+        {%include "includes/login.html"%}
+        {%endif%}
+    </h1>
+    
+</body>
+</html>

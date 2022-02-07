@@ -1,0 +1,23 @@
+h1
+{
+    width: 100%;
+    height: 20%;
+    margin-left: 0px;
+    text-align: center;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: #87CEFA;
+    border-top: 80px solid #87CEFA;
+    border:1px solid black;
+
+}
+body
+{
+    
+    background-color:#1E90FF;
+    border-color: black;
+    border-top: 500px;
+    border-left: 0px ;
+    margin: 0px;
+}
